@@ -1,0 +1,61 @@
+{
+  "name": "hearts-color",
+  "author": "MMazzocchi",
+  "version": "2.0.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "displayName": "Life Level",
+    "uuid": "f83985f1-9830-4952-99cc-f0f587119ac0",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite"
+    ],
+    "watchapp": {
+      "watchface": true 
+    },
+    "messageKeys": [
+      "dummy"
+    ],
+    "resources": {
+      "media": [
+        {
+          "menuIcon": true,
+          "type": "png",
+          "name": "IMAGE_MENU_ICON",
+          "file": "images/icon.png"
+        },
+        {
+          "type": "png",
+          "name": "IMAGE_EMPTY",
+          "file": "images/empty.png"
+        },
+        {
+          "type": "png",
+          "name": "IMAGE_QUARTER",
+          "file": "images/quarter.png"
+        },
+        {
+          "type": "png",
+          "name": "IMAGE_HALF",
+          "file": "images/half.png"
+        },
+        {
+          "type": "png",
+          "name": "IMAGE_THREE_QUARTER",
+          "file": "images/three_quarter.png"
+        },
+        {
+          "type": "png",
+          "name": "IMAGE_FULL",
+          "file": "images/full.png"
+        }
+      ]
+    }
+  }
+}
