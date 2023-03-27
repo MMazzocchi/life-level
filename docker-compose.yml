@@ -1,0 +1,6 @@
+services:
+  pebble:
+    image: rebble/pebble-sdk
+    working_dir: /watchface
+    volumes:
+      - ./watchface:/watchface
