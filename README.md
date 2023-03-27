@@ -4,6 +4,8 @@ The `Life Level` watchface is a Pebble watchface displaying battery level has a 
 
 Originally built for the original Pebble, it's since been updated for the Pebble Time.
 
+[See it on Rebble!](https://apps.rebble.io/en_US/application/5356ac4d039d6076ba000025)
+
 ## Build
 
 To build, install [Docker and Docker Compose](https://docs.docker.com/compose/install/) and then use the following command:
