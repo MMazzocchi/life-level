@@ -17,6 +17,7 @@ static AnimationImplementation ami;
 
 int sectors;
 bool charging;
+int minutes = -1;
 
 int chargeToSectors(int charge) {
   int sectors = (charge * 12)/100;
@@ -81,17 +82,19 @@ void drawTime() {
 void tick(struct tm *time, TimeUnits changed) {
   BatteryChargeState state = battery_state_service_peek();
 
+  bool redraw = false;
+
   if(!charging) {
     if(state.is_charging) {
       charging = true;
       animation_schedule(charge_animation);
+
     } else {
       int charge = state.charge_percent;
       int new_sectors = chargeToSectors(charge);
       if(sectors != new_sectors) {
         sectors = new_sectors;
-        drawTime();
-        layer_mark_dirty(canvas);
+        redraw = true;
       }
     }
   } else {
@@ -99,6 +102,16 @@ void tick(struct tm *time, TimeUnits changed) {
       animation_unschedule(charge_animation);
       charging = false;
     }
+  }
+
+  if(minutes != time->tm_min) {
+    minutes = time->tm_min;
+    redraw = true;
+  }
+
+  if(redraw) {
+    drawTime();
+    layer_mark_dirty(canvas);
   }
 }
 
