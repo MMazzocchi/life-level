@@ -1,7 +1,7 @@
 {
   "name": "hearts-color",
   "author": "MMazzocchi",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "keywords": ["pebble-app"],
   "private": true,
   "dependencies": {},
